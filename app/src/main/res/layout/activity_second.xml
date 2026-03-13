@@ -113,14 +113,6 @@
                 android:textStyle="bold"
                 app:cornerRadius="12dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:text="Dengan mendaftar, kamu setuju dengan syarat &amp; ketentuan kami."
-                android:textColor="#999999"
-                android:textSize="11sp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
