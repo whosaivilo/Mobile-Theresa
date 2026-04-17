@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         // Set onClickListener
         binding.btnKirim.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
+            intent.putExtra("nama", "Bang Irgi")
+            intent.putExtra("asal","Lab 151")
+            intent.putExtra("usia", 30)
             startActivity(intent)
         }
 
