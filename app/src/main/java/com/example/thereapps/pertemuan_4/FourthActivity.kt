@@ -10,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.thereapps.MainActivity
 import com.example.thereapps.R
 import com.example.thereapps.databinding.ActivityFourthBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 
 class FourthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFourthBinding
@@ -30,6 +32,29 @@ class FourthActivity : AppCompatActivity() {
         Log.e("Data Intent","Nama: $nama , Usia: $usia, Asal: $asal")
         binding.btnKembali.setOnClickListener {
            finish()
+        }
+        binding.btnShowSnackbar.setOnClickListener {
+            Snackbar.make(binding.root, "Ini adalah Snackbar", Snackbar.LENGTH_SHORT)
+                .setAction("Tutup"){
+//                    finish() aksi apapun bisa diletakkan disini
+                    Log.e("Info Snackbar","Snackbar ditutup")
+                }
+                .show()
+        }
+        binding.btnShowAlertDialog.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Konfirmasi")
+                .setMessage("Apa anda suka mata kuliah ini?")
+                .setPositiveButton("Banget lah!") { dialog, _ ->
+                    dialog.dismiss()
+                    Log.e("Info Dialog","Anda memilih Ya!")
+                }
+                .setNegativeButton("Ya kali engga") { dialog, _ ->
+                    dialog.dismiss()
+                    finish()
+                    Log.e("Info Dialog","Anda memilih Tidak!")
+                }
+                .show()
         }
         Log.e("onCreate", "FourthActivity dibuat pertama kali")
     }
