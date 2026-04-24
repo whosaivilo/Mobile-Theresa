@@ -2,12 +2,12 @@ package com.example.thereapps.pertemuan_3
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
+import com.example.thereapps.R
+import android.view.Menu
 import android.view.MenuItem
 import com.example.thereapps.databinding.ActivityThirdBinding
 
@@ -40,6 +40,10 @@ class ThirdActivity : AppCompatActivity() {
         }
 
     }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
@@ -47,7 +51,10 @@ class ThirdActivity : AppCompatActivity() {
                 onBackPressedDispatcher.onBackPressed()
                 true
             }
-
+            R.id.action_settings -> {
+                Toast.makeText(this, "Settings Halaman 3", Toast.LENGTH_SHORT).show()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }

@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.thereapps.R
 import android.view.MenuItem
+import android.view.Menu
 import com.example.thereapps.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
@@ -28,12 +29,26 @@ class SecondActivity : AppCompatActivity() {
 
 
     }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            onBackPressedDispatcher.onBackPressed()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+                true
+            }
+
+            R.id.action_search -> {
+                Toast.makeText(this, "Search di Halaman 2", Toast.LENGTH_SHORT).show()
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
+
+    }
 }
