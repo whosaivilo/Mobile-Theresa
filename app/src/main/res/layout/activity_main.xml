@@ -5,23 +5,73 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="24dp"
     tools:context=".MainActivity">
 
-
-    <Button
-        android:id="@+id/btnKirim"
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kirim"
+        android:text="Dashboard Praktikum"
+        android:textSize="24sp"
+        android:textStyle="bold"
         android:fontFamily="@font/outfit_variablefont_wght"
-        android:backgroundTint="@color/btn"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnPertemuan2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintVertical_chainStyle="packed" />
 
+    <Button
+        android:id="@+id/btnPertemuan2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/btn"
+        android:fontFamily="@font/outfit_variablefont_wght"
+        android:text="@string/per2"
+        app:layout_constraintBottom_toTopOf="@+id/btnPertemuan3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
+    <Button
+        android:id="@+id/btnPertemuan3"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/btn"
+        android:fontFamily="@font/outfit_variablefont_wght"
+        android:text="@string/per3"
+        app:layout_constraintBottom_toTopOf="@+id/btnPertemuan4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPertemuan2" />
+
+    <Button
+        android:id="@+id/btnPertemuan4"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/btn"
+        android:fontFamily="@font/outfit_variablefont_wght"
+        android:text="@string/per4"
+        app:layout_constraintBottom_toTopOf="@+id/btnPertemuan5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPertemuan3" />
+
+    <Button
+        android:id="@+id/btnPertemuan5"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/btn"
+        android:fontFamily="@font/outfit_variablefont_wght"
+        android:text="@string/per5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPertemuan4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

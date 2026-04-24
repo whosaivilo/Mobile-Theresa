@@ -3,4 +3,9 @@
     <string name="judul">Verifikasi Login</string>
     <string name="berhasil">Kode berhasil dikirim!</string>
     <string name="capt">Silakan periksa nomor Anda </string>
+    <string name="per2">Pertemuan 2 </string>
+    <string name="per3">Pertemuan 3 </string>
+    <string name="per4">Pertemuan 4 </string>
+    <string name="per5">Pertemuan 5 </string>
+    <string name="judul_per5">Edukasi KASPRO</string>
 </resources>

@@ -12,6 +12,17 @@
         android:id="@+id/action_settings"
         android:title="Settings"
         android:icon="@android:drawable/ic_menu_preferences"
-        app:showAsAction="never" />
-
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/sub_profile"
+                android:title="Edit Profil" />
+            <item
+                android:id="@+id/sub_theme"
+                android:title="Ganti Tema" />
+            <item
+                android:id="@+id/sub_logout"
+                android:title="Keluar" />
+        </menu>
+    </item>
 </menu>

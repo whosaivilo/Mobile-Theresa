@@ -1,5 +1,6 @@
 package com.example.thereapps.pertemuan_5
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -10,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.thereapps.R
 import com.example.thereapps.databinding.ActivityFifthBinding
+import kotlin.jvm.java
 
 
 class FifthActivity : AppCompatActivity() {
@@ -19,10 +21,16 @@ class FifthActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityFifthBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnWebView.setOnClickListener {
+            val intent = Intent(this, WebViewActivity::class.java)
+            startActivity(intent)
+        }
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
             title = "Activity Fifth"
-            subtitle = "Ini adalah subtitle"
+            subtitle = "Selamat datang di pertemuan 5!"
+            setHomeAsUpIndicator(R.drawable.ic_arrow_back)
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
@@ -41,13 +49,22 @@ class FifthActivity : AppCompatActivity() {
                 true
             }
             R.id.action_search -> {
-                Toast.makeText(this, "Search Clicked", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Search diklik", Toast.LENGTH_SHORT).show()
                 true
             }
-            R.id.action_settings -> {
-                Toast.makeText(this, "Settings Clicked", Toast.LENGTH_SHORT).show()
+            R.id.sub_profile -> {
+                Toast.makeText(this, "Membuka Edit Profil", Toast.LENGTH_SHORT).show()
                 true
         }
+            R.id.sub_theme -> {
+                Toast.makeText(this, "Pilih Tema Aplikasi", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.sub_logout -> {
+                Toast.makeText(this, "Sesi Berakhir", Toast.LENGTH_SHORT).show()
+                finish() // Menutup activity
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }

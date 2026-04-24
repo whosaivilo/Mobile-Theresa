@@ -10,9 +10,9 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="384dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="400dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
         android:background="?attr/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,7 @@ android:backgroundTint="@color/btn"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.626"
+        app:layout_constraintVertical_bias="0.847"
         app:srcCompat="@drawable/hp" />
 
     <TextView
@@ -62,7 +62,7 @@ android:backgroundTint="@color/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/judul"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25dp"
         android:textStyle="bold"
         android:fontFamily="@font/crimsontext_semibold"
