@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
-import com.example.thereapps.R
+import android.view.MenuItem
 import com.example.thereapps.databinding.ActivityThirdBinding
 
 class ThirdActivity : AppCompatActivity() {
@@ -19,7 +19,13 @@ class ThirdActivity : AppCompatActivity() {
         binding = ActivityThirdBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.apply {
+            title = "Kirim Pesan"
+            subtitle = "Pertemuan 3"
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
+        }
         // Set onClickListener
         binding.btnKirim.setOnClickListener {
 
@@ -33,6 +39,16 @@ class ThirdActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
         }
     }
+}

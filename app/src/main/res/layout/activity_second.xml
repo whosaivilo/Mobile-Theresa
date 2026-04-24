@@ -8,6 +8,18 @@
     android:background="#F5F7FA"
     tools:context=".pertemuan_2.SecondActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="384dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@android:color/white"
+        app:titleTextColor="@android:color/white" />
+
     <View
         android:id="@+id/topDecorator"
         android:layout_width="match_parent"

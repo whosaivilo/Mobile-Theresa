@@ -12,31 +12,34 @@ import com.example.thereapps.R
 import com.example.thereapps.databinding.ActivityFourthBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
+import android.view.MenuItem
+
 
 class FourthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFourthBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         binding = ActivityFourthBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
 
-        }
         val nama = intent.getStringExtra("nama")
         val asal = intent.getStringExtra("asal")
         val usia = intent.getStringExtra("usia")
         Log.e("Data Intent","Nama: $nama , Usia: $usia, Asal: $asal")
         binding.btnKembali.setOnClickListener {
-           finish()
+            finish()
         }
+
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.apply {
+            title = "Profil $nama"
+            subtitle = "Pertemuan 4"
+            setDisplayHomeAsUpEnabled(true)
+        }
+
         binding.btnShowSnackbar.setOnClickListener {
             Snackbar.make(binding.root, "Ini adalah Snackbar", Snackbar.LENGTH_SHORT)
                 .setAction("Tutup"){
-//                    finish() aksi apapun bisa diletakkan disini
                     Log.e("Info Snackbar","Snackbar ditutup")
                 }
                 .show()
@@ -66,5 +69,12 @@ class FourthActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.e("onDestroy", "FourthActivity dihapus dari stack")
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            onBackPressedDispatcher.onBackPressed()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

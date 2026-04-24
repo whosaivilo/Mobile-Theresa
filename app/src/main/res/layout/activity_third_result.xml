@@ -7,6 +7,19 @@
     android:layout_height="match_parent"
     android:background="@color/bg"
     tools:context=".pertemuan_3.ThirdResultActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="384dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@android:color/white"
+        app:titleTextColor="@android:color/white" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
