@@ -1,11 +1,18 @@
 <resources>
     <string name="app_name">there Apps</string>
     <string name="judul">Verifikasi Login</string>
+    <string name="nama_aplikasi">KasRadar</string>
     <string name="berhasil">Kode berhasil dikirim!</string>
     <string name="capt">Silakan periksa nomor Anda </string>
     <string name="per2">Pertemuan 2 </string>
     <string name="per3">Pertemuan 3 </string>
     <string name="per4">Pertemuan 4 </string>
     <string name="per5">Pertemuan 5 </string>
+    <string name="uname">Username</string>
+    <string name="pass">Password</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="google">Login dengan Google</string>
+    <string name="isiuname">Masukkan username disini</string>
     <string name="judul_per5">Edukasi KASPRO</string>
 </resources>
