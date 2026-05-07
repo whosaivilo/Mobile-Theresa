@@ -18,10 +18,11 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val intent = Intent(this, AuthActivity::class.java)
         enableEdgeToEdge()
 
         lifecycleScope.launch {
-            delay(2000) //simulasi pengambilan data selama 2 detik
+            delay(2000) //simulasi pengambilan data selama 2 detik`
 
 //            cek login
             val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
@@ -33,7 +34,8 @@ class SplashScreenActivity : AppCompatActivity() {
                 AuthActivity::class.java
             }
 
-            startActivity(Intent(this@SplashScreenActivity, targetActivity))
+
+            startActivity(intent)
             finish()
 
         }
