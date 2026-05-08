@@ -1,4 +1,4 @@
-package com.example.thereapps.pertemuan_2
+package com.example.thereapps.Home.pertemuan_2
 
 import android.os.Bundle
 import android.widget.Toast

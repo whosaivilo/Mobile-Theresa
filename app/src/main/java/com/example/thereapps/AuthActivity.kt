@@ -36,7 +36,7 @@ class AuthActivity : AppCompatActivity() {
                 editor.putBoolean("isLogin", true)
                 editor.putString("username", username) // Bonus: simpan nama user
                 editor.apply()
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, BaseActivity::class.java))
                 finish()
             }else{
                 AlertDialog.Builder(this)

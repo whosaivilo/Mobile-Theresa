@@ -1,4 +1,4 @@
-package com.example.thereapps.pertemuan_5
+package com.example.thereapps.Home.pertemuan_5
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,8 +7,6 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.thereapps.R
 import com.example.thereapps.databinding.ActivityFifthBinding
 import kotlin.jvm.java

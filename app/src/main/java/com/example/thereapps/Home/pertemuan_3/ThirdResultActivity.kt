@@ -1,5 +1,6 @@
-package com.example.thereapps.pertemuan_3
+package com.example.thereapps.Home.pertemuan_3
 
+import android.R
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -30,7 +31,7 @@ class ThirdResultActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
+        if (item.itemId == R.id.home) {
             onBackPressedDispatcher.onBackPressed()
             return true
         }

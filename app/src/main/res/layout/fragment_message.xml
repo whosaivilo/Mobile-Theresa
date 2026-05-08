@@ -4,15 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/btn_safe"
-    tools:context=".Home.pertemuan_7.DuaFragment">
-
+    tools:context=".Message.MessageFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fontFamily="@font/crimsontext_semibold"
-        android:text="Selamat datang di fragment 2"
-       android:textColor="@color/black"
+        android:text="Selamat datang di Fragment Message"
+        android:textColor="@color/black"
+        android:textAlignment="center"
         android:textSize="30dp" />
+
 
 </FrameLayout>

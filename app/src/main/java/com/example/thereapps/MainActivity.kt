@@ -1,17 +1,16 @@
 package com.example.thereapps
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.thereapps.databinding.ActivityMainBinding
 import androidx.appcompat.app.AlertDialog
-import com.example.thereapps.pertemuan_2.SecondActivity
-import com.example.thereapps.pertemuan_3.ThirdActivity
-import com.example.thereapps.pertemuan_4.FourthActivity
-import com.example.thereapps.pertemuan_5.FifthActivity
-import com.example.thereapps.pertemuan_7.SeventhActivity
+import com.example.thereapps.Home.pertemuan_2.SecondActivity
+import com.example.thereapps.Home.pertemuan_3.ThirdActivity
+import com.example.thereapps.Home.pertemuan_4.FourthActivity
+import com.example.thereapps.Home.pertemuan_5.FifthActivity
+import com.example.thereapps.Home.pertemuan_7.SeventhActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

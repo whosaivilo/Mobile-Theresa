@@ -1,15 +1,10 @@
-package com.example.thereapps.pertemuan_7
+package com.example.thereapps.Home.pertemuan_7
 
 import android.os.Bundle
-import android.view.Menu
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.thereapps.R
 import com.example.thereapps.databinding.ActivitySeventhBinding
-import com.example.thereapps.databinding.ActivityWebViewBinding
 
 class SeventhActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySeventhBinding
