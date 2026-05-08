@@ -8,6 +8,7 @@
     <string name="per3">Pertemuan 3 </string>
     <string name="per4">Pertemuan 4 </string>
     <string name="per5">Pertemuan 5 </string>
+    <string name="per7">Pertemuan 7 </string>
     <string name="uname">Username</string>
     <string name="pass">Password</string>
     <string name="login">Login</string>
@@ -15,4 +16,6 @@
     <string name="google">Login dengan Google</string>
     <string name="isiuname">Masukkan username disini</string>
     <string name="judul_per5">Edukasi KASPRO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

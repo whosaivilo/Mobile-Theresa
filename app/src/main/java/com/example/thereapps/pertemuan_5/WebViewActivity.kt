@@ -10,8 +10,8 @@ import com.example.thereapps.databinding.ActivityWebViewBinding
 
 class WebViewActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityWebViewBinding
 
+    private lateinit var binding: ActivityWebViewBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWebViewBinding.inflate(layoutInflater)
@@ -23,7 +23,7 @@ class WebViewActivity : AppCompatActivity() {
             title = "Loading..."
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
-//            setHomeAsUpIndicator(R.drawable.ic_arrow_back)
+            setHomeAsUpIndicator(R.drawable.ic_arrow_back)
         }
 
         binding.webView.apply {
