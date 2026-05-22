@@ -34,7 +34,7 @@ class AuthActivity : AppCompatActivity() {
             if (username == password && username.isNotEmpty()){
                 val editor = sharedPref.edit()
                 editor.putBoolean("isLogin", true)
-                editor.putString("username", username) // Bonus: simpan nama user
+                editor.putString("username", username)
                 editor.apply()
                 startActivity(Intent(this, BaseActivity::class.java))
                 finish()

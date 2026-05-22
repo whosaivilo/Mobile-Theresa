@@ -17,6 +17,7 @@ import com.example.thereapps.Home.pertemuan_5.FifthActivity
 import com.example.thereapps.Home.pertemuan_7.SeventhActivity
 import com.example.thereapps.R
 import com.example.thereapps.databinding.FragmentHomeBinding
+import com.example.thereapps.pertemuan_9.NinthActivity
 
 class HomeFragment : Fragment() {
 //di fragment gasbisa pakai this, ganti jadi requireContext()
@@ -84,6 +85,9 @@ class HomeFragment : Fragment() {
         }
         binding.btnPertemuan7.setOnClickListener{
             startActivity(Intent(requireContext(), SeventhActivity::class.java))
+        }
+        binding.btnPertemuan9.setOnClickListener {
+            startActivity(Intent(requireContext(), NinthActivity::class.java))
         }
     }
 }

@@ -11,6 +11,7 @@ import com.example.thereapps.Home.pertemuan_3.ThirdActivity
 import com.example.thereapps.Home.pertemuan_4.FourthActivity
 import com.example.thereapps.Home.pertemuan_5.FifthActivity
 import com.example.thereapps.Home.pertemuan_7.SeventhActivity
+import com.example.thereapps.pertemuan_9.NinthActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -66,6 +67,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnPertemuan7.setOnClickListener{
             startActivity(Intent(this, SeventhActivity::class.java))
+        }
+        binding.btnPertemuan9.setOnClickListener {
+            startActivity(Intent(this, NinthActivity::class.java))
         }
 
     }

@@ -22,22 +22,24 @@ class SplashScreenActivity : AppCompatActivity() {
         enableEdgeToEdge()
 
         lifecycleScope.launch {
-            delay(2000) //simulasi pengambilan data selama 2 detik`
 
-//            cek login
+            delay(2000)
+
             val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+
             val isLogin = sharedPref.getBoolean("isLogin", false)
 
-            val targetActivity = if (isLogin) {
-                BaseActivity::class.java
+            if (isLogin) {
+
+                startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
+
             } else {
-                AuthActivity::class.java
+
+                startActivity(Intent(this@SplashScreenActivity, AuthActivity::class.java))
+
             }
 
-
-            startActivity(intent)
             finish()
-
         }
     }
 }
