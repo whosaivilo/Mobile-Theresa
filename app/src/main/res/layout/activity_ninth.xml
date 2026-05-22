@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/edit_text_background"
     tools:context=".pertemuan_9.NinthActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -89,5 +90,82 @@
             android:text="Belum Dibaca" />
 
     </com.google.android.material.chip.ChipGroup>
+
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroupFilter"
+        android:background="@drawable/edit_text_background"/>
+
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:columnCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        app:useDefaultMargins="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:text="Menu 1"
+            app:layout_columnWeight="1"
+            app:icon="@drawable/ic_home"
+            app:iconGravity="top"
+            app:iconSize="30sp"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:text="Menu 2"
+            app:layout_columnWeight="1"
+            app:icon="@drawable/ic_home"
+            app:iconGravity="top"
+            app:iconSize="30sp"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:text="Menu 3"
+            app:layout_columnWeight="1"
+            app:icon="@drawable/ic_home"
+            app:iconGravity="top"
+            app:iconSize="30sp"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:text="Menu 4"
+            app:layout_columnWeight="1"
+            app:icon="@drawable/ic_home"
+            app:iconGravity="top"
+            app:iconSize="30sp"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:text="Menu 5"
+            app:layout_columnWeight="1"
+            app:icon="@drawable/ic_home"
+            app:iconGravity="top"
+            app:iconSize="30sp"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:text="Menu 6"
+            app:icon="@drawable/ic_home"
+            app:iconGravity="top"
+            app:iconSize="30sp"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
