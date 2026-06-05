@@ -7,8 +7,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.thereapps.AuthActivity
 import com.example.thereapps.Home.pertemuan_10.TenthActivity
 import com.example.thereapps.Home.pertemuan_2.SecondActivity
@@ -16,9 +20,13 @@ import com.example.thereapps.Home.pertemuan_3.ThirdActivity
 import com.example.thereapps.Home.pertemuan_4.FourthActivity
 import com.example.thereapps.Home.pertemuan_5.FifthActivity
 import com.example.thereapps.Home.pertemuan_7.SeventhActivity
+import com.example.thereapps.Home.photo.PhotoAdapter
 import com.example.thereapps.R
+import com.example.thereapps.data.api.CatFactApiClient
+import com.example.thereapps.data.api.PhotoApiClient
 import com.example.thereapps.databinding.FragmentHomeBinding
 import com.example.thereapps.pertemuan_9.NinthActivity
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 //di fragment gasbisa pakai this, ganti jadi requireContext()
@@ -33,12 +41,19 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
         (requireActivity() as AppCompatActivity).supportActionBar?.apply {
             title = "Home"
+        }
+        loadPhoto()
+
+        binding.btnRefresh.setOnClickListener {
+            loadCatFact()
         }
         val sharedPref = requireContext().getSharedPreferences("user_pref", MODE_PRIVATE)
         binding.btnLogout.setOnClickListener {
@@ -92,6 +107,40 @@ class HomeFragment : Fragment() {
         }
         binding.btnPertemuan10.setOnClickListener {
             startActivity(Intent(requireContext(), TenthActivity::class.java))
+        }
+    }
+
+
+    private fun loadPhoto() {
+        lifecycleScope.launch {
+            try {
+                val photos = PhotoApiClient.apiService.getPhotos()
+                val adapter = PhotoAdapter(photos)
+                binding.rvGallery.adapter = adapter
+
+                /** List Tampil Vertical*/
+//                binding.rvGallery.layoutManager = LinearLayoutManager(requireContext())
+
+                /** List Tampil Horizontal */
+                //binding.rvGallery.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+                /** List Tampil Grid */
+                binding.rvGallery.layoutManager = GridLayoutManager(requireContext(), 2)
+
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "Gagal memuat gambar", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+        }
+    private fun loadCatFact() {
+        lifecycleScope.launch {
+            try {
+                val response = CatFactApiClient.apiService.getCatFact()
+                binding.tvCatFact.text = "\"${response.fact}\""
+            } catch (e: Exception) {
+                binding.tvCatFact.text = "Gagal mengambil fakta kucing."
+            }
         }
     }
 }
