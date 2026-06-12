@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.thereapps.Home.HomeFragment
 import com.example.thereapps.Message.MessageFragment
 import com.example.thereapps.More.MoreFragment
+import com.example.thereapps.Note.NoteFragment
 import com.example.thereapps.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -33,6 +34,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.more -> {
                     replaceFragment(MoreFragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
                     true
                 }
                 else -> false // return false jika item tidak ada yang di klik
