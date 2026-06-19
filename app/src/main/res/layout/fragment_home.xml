@@ -147,6 +147,17 @@
                     android:text="Pertemuan 10"
                     app:cornerRadius="16dp" />
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPertemuan13"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="@color/primary"
+                    android:text="Pertemuan 13"
+                    app:cornerRadius="16dp" />
+
             </GridLayout>
 
             <com.google.android.material.button.MaterialButton

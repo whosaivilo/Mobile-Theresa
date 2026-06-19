@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.thereapps.AuthActivity
 import com.example.thereapps.Home.pertemuan_10.TenthActivity
+import com.example.thereapps.Home.pertemuan_13.ThirteenthActivity
 import com.example.thereapps.Home.pertemuan_2.SecondActivity
 import com.example.thereapps.Home.pertemuan_3.ThirdActivity
 import com.example.thereapps.Home.pertemuan_4.FourthActivity
@@ -95,7 +96,6 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
-
         binding.btnPertemuan5.setOnClickListener {
             startActivity(Intent(requireContext(), FifthActivity::class.java))
         }
@@ -108,8 +108,11 @@ class HomeFragment : Fragment() {
         binding.btnPertemuan10.setOnClickListener {
             startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
+        binding.btnPertemuan13.setOnClickListener {
+            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
+            startActivity(intent)
+        }
     }
-
 
     private fun loadPhoto() {
         lifecycleScope.launch {
