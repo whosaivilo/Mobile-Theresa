@@ -77,14 +77,20 @@
                 app:layout_constraintVertical_bias="0.542" />
 
             <Button
+                android:id="@+id/btnShowNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tampilkan Notifikasi" />
+
+            <Button
                 android:id="@+id/btnShowAlertDialog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="64dp"
                 android:backgroundTint="@color/black"
                 android:text="Show AlertDialog"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.444"
+                app:layout_constraintHorizontal_bias="0.194"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
